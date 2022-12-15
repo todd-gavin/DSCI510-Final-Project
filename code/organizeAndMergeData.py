@@ -1,12 +1,12 @@
 from Historic_Crypto import HistoricalData as HD
 import pandas as pd
 import requests
-import json
-import time
+import ujson
 from datetime import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats
+import time
 
 def convert_UNIX_to_DateTime(unix):
     return datetime.utcfromtimestamp(int(unix)).strftime('%Y-%m-%d %H:%M:%S') # 

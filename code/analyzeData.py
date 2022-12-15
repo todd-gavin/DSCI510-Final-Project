@@ -1,12 +1,12 @@
 from Historic_Crypto import HistoricalData as HD
 import pandas as pd
 import requests
-import json
-import time
+import ujson
 from datetime import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats
+import time
 
 def performLinearRegression(data1, data2):
     a = data1
@@ -29,7 +29,7 @@ def create_scatter_plot(data1, data2, title, xlabel, ylabel, figureText):
     # Fit a regression line to the data and plot it on the scatter plot
     sns.regplot(data1, data2)
 
-    plt.savefig("visualizations/"+title+".png", dpi=300, bbox_inches = "tight")
+    plt.savefig("code/visualizations/"+title+".png", dpi=300, bbox_inches = "tight")
 
     # Show the plot
     plt.show()
@@ -55,7 +55,7 @@ def create_line_plot(data1, data1Label, data2, data2Label, title, xlabel, ylabel
     # plt.text(0, 20,'\n'.join(text), fontsize=10, ha='left', va='bottom')
 
     # plots bar chart of keys (x) against values (y)
-    plt.savefig("visualizations/"+title+".png", dpi=300, bbox_inches = "tight")
+    plt.savefig("code/visualizations/"+title+".png", dpi=300, bbox_inches = "tight")
 
 def getDataForVisualizations(rawTransactionData_df,timeSeriesTransactionData_df):
 

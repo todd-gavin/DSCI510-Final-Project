@@ -1,12 +1,12 @@
 from Historic_Crypto import HistoricalData as HD
 import pandas as pd
 import requests
-import json
-import time
+import ujson
 from datetime import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats
+import time
 
 def etherScanAPICall(wallet_address):
     API_KEY = 'JATAZ8XWIBGBTY15YJJEABCDPIF8SCK7S3'

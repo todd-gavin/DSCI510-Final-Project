@@ -6,12 +6,12 @@ from analyzeData import create_scatter_plot, create_line_plot, getDataForVisuali
 from Historic_Crypto import HistoricalData as HD
 import pandas as pd
 import requests
-import json
-import time
+import ujson
 from datetime import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats
+import time
 
 # Execute Main function
 if __name__ == '__main__':

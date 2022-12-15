@@ -17,6 +17,7 @@ import scipy.stats
 if __name__ == '__main__':
 
     # Collect Data ***************************
+    print("Running Collect Data....")
     listOfWallets = [
         '0x9507c04b10486547584c37bcbd931b2a4fee9a41',
         '0x5666ed92c83af9dab61601c87bf7769ad57103f9',
@@ -33,6 +34,7 @@ if __name__ == '__main__':
     tokenPriceData_df = getCryptoHistoricalData("MATIC-USD", startDate, endDate)
 
     # Organize and Merge Data ***************************
+    print("Running Organize and Merge Data....")
     tokenPriceData_df = addDateColumnToTokenPriceDataframe(tokenPriceData_df)
     rawTransactionData_df = orientDatesAndCorrespondingData(tokenPriceData_df, startDate, rawTransactionData_df)
     rawTransactionData_df = addColumns_dateBuySellValueMovementTotalGasCost(rawTransactionData_df, listOfWallets)
@@ -46,6 +48,7 @@ if __name__ == '__main__':
     timeSeriesTransactionData_df.to_csv('timeSeriesTransactionData_df.csv', index=True)
 
     # Analyze Data and Visualize Data ***************************
+    print("Running Analyze Data and Visualize Data....")
     maticPriceUSD, gasPriceUSD, numGas, OCdailyPrice, ABSOCdailyPrice, HLdailyPrice, totalCostUSD, ABStotalCostUSD, gasPrice, maticPriceUSDv2, maticPriceUSDx100000000, volume, ABSValueMovedUSD, buyNum, sellNum = getDataForVisualizations(rawTransactionData_df,timeSeriesTransactionData_df)
 
     create_scatter_plot(ABStotalCostUSD, maticPriceUSD, "ABS Total Cost USD VS MATIC Price USD", "Absolute Value of Total USD Moved", "MATIC Price USD", "Fig 1. Along the x-axis is the absolute value fo the total amount\n of MATIC moved (bought or sold) for a give day in USD.\n Along the y-axis is the price of MATIC in USD for a given\n corresponding day. The R-value is 0.0078 stating that there is\n no signifciant correlation between these two variables.")
@@ -61,3 +64,5 @@ if __name__ == '__main__':
     create_line_plot(maticPriceUSDx100000000, "maticPriceUSD", ABSValueMovedUSD, "ABSValueMovedUSD", "maticPriceUSDx100000000 VS ABS Value Moved USD", "Days since start date", "Magnitude", "Fig 6. This line plot depicts the price of MATIC to the magnitude\n of x100000000 and the absolute value token cost moved for\n the corresponding day.")
 
     create_line_plot(buyNum, "buyNum", sellNum, "sellNum", "Buy Num vs Sell Num", "Days since start date", "Magnitude", "Fig 7. This line plot depicts the number of buys against\n the number of sells for a corresponding day. There seems to\n be an association between the number of\n buys and number of sells for a particular day.")
+
+    print("Code finished running...")

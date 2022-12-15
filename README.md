@@ -1,4 +1,4 @@
-# DSCI 510 - Final Project Template  
+# DSCI 510 - Analyzing MATIC token crypto wallet transaction data and price data
 
 Title: Analyzing how the transaction data from major cryptocurrency wallets on the polygon network associate with the price action of the MATIC token.
 

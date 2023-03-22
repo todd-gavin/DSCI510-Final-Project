@@ -9,14 +9,14 @@ Description: The MATIC token is a cryptocurrency that operates of the Polygon la
 
 > A list of all of the dependencies used, including their version number:
 
-pandas==1.4.4
-requests==2.28.1
-ujson==5.4.0
-datetime==2.11.1
-matplotlib==3.5.2
-seaborn==0.11.2
-scipy==1.9.1
-historic-crypto==0.1.6
+- pandas==1.4.4
+- requests==2.28.1
+- ujson==5.4.0
+- datetime==2.11.1
+- matplotlib==3.5.2
+- seaborn==0.11.2
+- scipy==1.9.1
+- historic-crypto==0.1.6
 
 # Installation
 

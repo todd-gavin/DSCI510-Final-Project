@@ -33,16 +33,16 @@ To run the project, there are two ways:
 2. Project may be ran as Python scripts (.py) in terminal.
 
 `Run as Python Notebook (Most preferable to elicit best result):`
-A.	Download the file ‘masterCode.ipynb’ from the ‘/code’ folder. 
-B.	Open sed file in VScode or another python notebook compiler such as Jupyter.
-C.	Censure that all the dependencies are pip installed on to your device for which you are running the code on.
-D.	In the same folder for which you store sed file in, create a folder called ‘visualizations’. (The plots will be saved to this folder once the code runs.)
-E.	Click ‘run all’ at the top of your interpreter and let the magic happen!
+1.	Download the file ‘masterCode.ipynb’ from the ‘/code’ folder. 
+2.	Open sed file in VScode or another python notebook compiler such as Jupyter.
+3.	Censure that all the dependencies are pip installed on to your device for which you are running the code on.
+4.	In the same folder for which you store sed file in, create a folder called ‘visualizations’. (The plots will be saved to this folder once the code runs.)
+5.	Click ‘run all’ at the top of your interpreter and let the magic happen!
 
 `Run as Python Script:`
-A.	Download the files ‘main.py, collectData.py, organizeAndMergeData.py, analyzeData.py’ from the ‘/code’ folder. Make sure to pip install the ‘requirements.txt’ file.
-B.	In the same folder for which you store sed file in, create a folder called ‘visualizations’. (The plots will be saved to this folder once the code runs.)
-C.	Open a terminal at the folder for which the code is stored in and run the command ‘python main.py’. And let the magic happen. 
+1.	Download the files ‘main.py, collectData.py, organizeAndMergeData.py, analyzeData.py’ from the ‘/code’ folder. Make sure to pip install the ‘requirements.txt’ file.
+2.	In the same folder for which you store sed file in, create a folder called ‘visualizations’. (The plots will be saved to this folder once the code runs.)
+3.	Open a terminal at the folder for which the code is stored in and run the command ‘python main.py’. And let the magic happen. 
 
 ```
 python code/main.py
